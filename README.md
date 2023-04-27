@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="../assets/img/marca.png" alt="marca">
+<img src="./assets/img/marca.png" alt="marca">
 <p>Projeto - Spartacus Academia 💪</p>
 </h1>
 
@@ -15,8 +15,8 @@
 
 * Page
 
-<img alt="logo" src="../assets/img/page.gif">
+<img alt="logo" src="./assets/img/page.gif">
 
 * Menu Mobile e Responsividade
 
-<img alt="logo" src="../assets/img/page2.gif">
+<img alt="logo" src="./assets/img/page2.gif">
