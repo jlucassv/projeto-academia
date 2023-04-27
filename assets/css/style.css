@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: black;
+  position: fixed;
+  height: 15vh;
+  z-index: 10000;
+  width: 100%;
+  box-shadow: 5px 5px 5px black;
+}
+
+#marca {
+  width: 80%;
+  height: 70px;
+}
+
+.menu div {
+  width: 32px;
+  height: 2px;
+  background-color: #ac0000;
+  margin: 8px;
+}
+.menu {
+  display: none;
+  cursor: pointer;
+}
+#btn-mobile {
+  display: none;
+}
+
+nav, #menu {
+  display: flex;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  margin: 0 40px;
+}
+
+#menu a:hover {
+  color: #cb0000;
+}
+
+#menu a::after {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #ac0000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
+
+#menu a > li {
+  padding: 1rem;
+  list-style: none;
+}
+#matricule li {
+  display: none;
+}
+
+#btn-navBar {
+  font-size: 17px;
+  font-weight: 500;
+  width: 160px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  background-color: #ac0000;
+  padding: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+#btn-navBar:hover {
+  background-color: white;
+  color: #ac0000;
+}
+
+/* BODY */
+
+.slider {
+  padding-top: 15vh;
+  margin: 0 auto;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.navigation-buttons {
+  position: absolute;
+  width: 100%;
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-btn {
+  border: 1px solid gray;
+  padding: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  margin: 0 4px;
+}
+
+.navigation-btn:hover {
+  background-color: gray;
+}
+
+#radioBtn-1:checked ~ .slide1 {
+  margin-left: 0;
+}
+
+#radioBtn-2:checked ~ .slide1 {
+  margin-left: -25%;
+}
+
+#radioBtn-3:checked ~ .slide1 {
+  margin-left: -50%;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 0 5px;
+  margin-top: 151px;
+}
+
+#radioBtn-1:checked ~ .navigation .auto-navigation1 {
+  background-color: white;
+}
+
+#radioBtn-2:checked ~ .navigation .auto-navigation2 {
+  background-color: white;
+}
+
+#radioBtn-3:checked ~ .navigation .auto-navigation3 {
+  background-color: white;
+}
+
+.container {
+  background: linear-gradient(180deg, black, black, #4c0000, #ac0000);
+}
+
+.cardsContainer {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  opacity: 30%;
+
+}
+
+#units {
+  margin: 150px 0;
+  background-color: black;
+  letter-spacing: 15px;
+}
+
+div > h1,
+div > p {
+  text-align: justify;
+  margin: 15px 0;
+  color: white;
+}
+
+div > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.unitCards {
+  margin: 0 auto;
+  width: 270px;
+  padding: 40px 5px;
+}
+
+.unitCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  height: 450px;
+  box-shadow: 10px 20px 50px black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cardButton {
+  font-size: 17px;
+  font-weight: 500;
+  width: 150px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  background-color: #ac0000;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.cardButton:hover {
+  background-color: white;
+  color: #ac0000;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.btn {
+  font-size: 17px;
+  font-weight: 500;
+  width: 300px;
+  color: white;
+  border: 1px solid #cb0000;
+  border-radius: 30px;
+  background-color: #ac0000;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  box-shadow: 5px 5px 30px black;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #ac0000;
+}
+#plans {
+  margin: 100px 0;
+  letter-spacing: 15px;
+}
+
+.planSession {
+  background: linear-gradient(180deg, #ac0000, #ac0000);
+}
+
+.plansCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+}
+
+.plansCards img {
+  width: 16px;
+}
+
+.plansCards h3{
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  color: white;
+  font-size: 23px;
+}
+
+#planTitle-1{
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.planCard {
+  margin: 30px 0;
+}
+
+.plans {
+  text-decoration: none;
+  padding: 20px;
+}
+
+.plansAdvantages{
+  margin: 40px 0;
+  list-style: none;
+  color: white;
+}
+
+.plansAdvantages-1{
+  margin: 40px 0;
+  list-style: none;
+  color: white;
+}
+
+.modalityContainer{
+  background: linear-gradient(180deg, #ac0000, black);
+}
+
+#modalities {
+  margin: 100px 0;
+  letter-spacing: 15px;
+}
+
+.modalityCards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modalityCard {
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.modalityImage{
+width: 50%;
+padding: 50px;
+}
+
+.modalityImage img{
+  border-radius: 15px;
+  height: 250px;
+  box-shadow: 10px 10px 30px black;
+}
+
+.modalityParagraph{
+  padding: 40px;
+  opacity: 90%;
+  width: 80%;
+}
+
+footer {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  background-color: black;
+}
+
+#logo {
+  width: 90px;
+  height: 90px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+footer a:hover{
+  color: #ac0000;
+}
+
+.socialNetworks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialNetworks img{
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.botao-wpp {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+a img {
+  width: 50px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 1px solid black;
+  background: #ac0000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 2100px){
+  nav {
+    gap: 0 150px;
+    font-size: 25px;
+  }
+  #btn-navBar {
+    font-size: 25px;
+    width: 250px;
+    height: 75px;
+    border-radius: 50px;
+  }
+  #menu {
+    gap: 0 70px;
+  }
+  .container {
+    padding: 0 500px;
+  }
+  .slider{
+    height: 125vh;
+  }
+  .navigation-buttons {
+    margin-top: 580px;
+  }
+  .navigation{
+    margin-top: 830px;
+  }
+  .modalityCard {
+    font-size: 25px;
+}
+  .modalityCard img {
+  height: 450px;
+  }
+  footer{
+    font-size: 25px;
+  }
+  #logo {
+    width: 200px;
+    height: 180px;
+  }
+  .socialNetworks img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1280px){
+ 
+  #btn-mobile {
+    display: block;
+    margin-left: 300px;
+    padding: .5rem 1rem;
+    gap: .5rem;
+  }
+  #nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 35%;
+    top: 70px;
+    right: -20px;
+    background: black;
+    z-index: 1000;
+    height: 0px;
+    transition: 0.2s ease-in-out;
+    visibility: hidden;
+    overflow-y: hidden;
+    border-bottom-left-radius: 150px;
+  }
+  #matricule li{
+    background-color: #ac0000;
+    border-radius: 30px;
+  }
+  #matricule li:hover {
+    background-color: white;
+    color: #ac0000;
+  }
+  #nav.active ul{
+    display: block;
+    height: 70vh;
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu li {
+    
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #btn-navBar{
+    display: none; 
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+   #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  #hamburguer{
+    border-top: 3px solid ;
+    width: 30px;
+    color: #ac0000;
+  }
+  #hamburguer::after, #hamburguer::before{
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before{
+    transform: rotate(135deg);
+
+  }
+  #nav.active #hamburguer::after{
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  
+  .plansAdvantages-1 {
+    display: none;
+  } 
+  #planTitle-1 {
+    display: none;
+  }
+  .modalityCard {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modalityImage, .modalityParagraph {
+    padding: 10px;
+    width: 70%;
+  }
+  #secondCard {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  footer {
+    padding-top: 120px;
+    height: 60vh;
+  }
+  .botao-wpp {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 979px) {
+  .slider {
+    height: 100%;
+  }
+  .navigation-buttons {
+    margin-top: -20px;
+  }
+  .navigation{
+    margin-top: 230px;
+  }
+  .plansCards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 758px){
+  header {
+    flex-wrap: nowrap;
+    padding: 40px;
+  }
+  .slider {
+    height: 400px;
+  }
+  .navigation-buttons {
+    margin-top: -110px;
+  }
+  .navigation{
+    margin-top: 140px;
+  }
+  #marca{
+    width: 290px;
+    height: 60px;
+  }
+  #nav.active ul {
+    height: 85vh;
+    width: 300px;
+}
+#btn-mobile {
+  margin-right: 5%;
+}
+
+}
+@media (max-width: 660px){
+  #marca{
+    margin-left: 220px;
+    width: 220px;
+    height: 50px;
+  }
+  #btn-mobile {
+    margin-right: 250px;
+  }
+  #nav.active ul {
+    height: 85vh;
+    width: 320px;
+  }
+}
+
+@media (max-width: 565px){
+  #marca{
+    margin-left: 300px;
+    width: 150px;
+    height: 40px;
+  }
+  #btn-mobile {
+    margin-right: 300px;
+    margin-left: 100px;
+  }
+  section {
+    width: 600px;
+  }
+  footer{
+    width: 600px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 70vh;
+    gap: 50px 0;    
+  }
+  div > h1{
+    font-size: 20px;
+  }
+  .slider {
+    height: 300px;
+}
+}
+
+@media (max-width: 392px){
+  section {
+    width: 400px;
+  }
+  footer{
+    width: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 70vh;
+    gap: 50px 0;    
+  }
+  div > h1{
+    font-size: 20px;
+  }
+  .navigation-buttons {
+    margin-top: -240px;
+    margin-left: 25px;
+  }
+  .navigation {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+  .slider {
+    height: 270px;
+}
+.botao-wpp {
+  position: fixed;
+  bottom: 75px;
+  right: 20px;
+}
+}
+
